@@ -1,11 +1,11 @@
 ARG RUNDECK_IMAGE
 FROM rundeck/rundeck:4.12.0
 
-RUN  sudo apt-get update && \
-     sudo apt-get install -y -qq --no-install-recommends wget git curl jq iputils-ping sysstat
+#RUN  sudo apt-get update && \
+#     sudo apt-get install -y -qq --no-install-recommends wget git curl jq iputils-ping sysstat
 
-RUN ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<< y
+#RUN ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 
-COPY --chown=rundeck:root data/resources.yml /home/rundeck
-COPY data/realm.properties /home/rundeck/server/config
-COPY data/plugins/. /home/rundeck/libext
+#COPY --chown=rundeck:root data/resources.yml /home/rundeck
+#COPY data/realm.properties /home/rundeck/server/config
+#COPY data/plugins/. /home/rundeck/libext
