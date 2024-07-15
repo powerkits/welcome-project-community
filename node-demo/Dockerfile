@@ -7,7 +7,7 @@ FROM rundeck/node-demo
 # build:
 #   context: node-demo
 
-COPY wait_for_key.sh  /usr/local/sbin/wait_for_key
-RUN chmod +x /usr/local/sbin/wait_for_key
+#COPY wait_for_key.sh  /usr/local/sbin/wait_for_key
+#RUN chmod +x /usr/local/sbin/wait_for_key
 
-CMD /usr/local/sbin/wait_for_key && /usr/local/sbin/rdeck_ssh_start
+#CMD /usr/local/sbin/wait_for_key && /usr/local/sbin/rdeck_ssh_start
