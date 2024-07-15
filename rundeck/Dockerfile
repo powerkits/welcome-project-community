@@ -1,5 +1,5 @@
 ARG RUNDECK_IMAGE
-FROM ${RUNDECK_IMAGE}
+FROM rundeck/rundeck:4.12.0
 
 RUN  sudo apt-get update && \
      sudo apt-get install -y -qq --no-install-recommends wget git curl jq iputils-ping sysstat
