@@ -14,7 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
+    - name: Build rundeck
       run: cd rundeck && docker build . --file Dockerfile --tag ttl.sh/rundeck-4.12:1d --push
+    - name: Build rundeck node
+      run: cd node-demo && docker build . --file Dockerfile --tag ttl.sh/rundeck-node:1d --push
+    - name: Build rundeck client
+      run: cd client && docker build . --file Dockerfile --tag ttl.sh/rundeck-client:1d --push
+    
+        
 
 
