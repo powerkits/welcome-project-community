@@ -1,5 +1,5 @@
 ARG BUILD_DEV_IMAGE
-FROM ${BUILD_DEV_IMAGE}
+FROM rundeckpro/env-builder:0.1.2
 
 #RUN mkdir -p /app/data
 #COPY acls /app/data/acls/
