@@ -20,6 +20,10 @@ jobs:
       run: cd node-demo && docker build . --file Dockerfile --tag ttl.sh/rundeck-node:1d --push
     - name: Build rundeck client
       run: cd client && docker build . --file Dockerfile --tag ttl.sh/rundeck-client:1d --push
+    - name: Build pdm ci
+      run: docker build . --file pdm-ci.Dockerfile --tag ttl.sh/pdm-ci-python310-slim:1d --push
+    - name: Build python 3.10 slim ci
+      run: docker build . --file python.Dockerfile --tag ttl.sh/python310-slim:1d --push
     
         
 
