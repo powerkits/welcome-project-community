@@ -24,6 +24,8 @@ jobs:
       run: docker build . --file pdm-ci.Dockerfile --tag ttl.sh/pdm-ci-python310-slim:1d --push
     - name: Build python 3.10 slim ci
       run: docker build . --file python.Dockerfile --tag ttl.sh/python310-slim:1d --push
+    - name: Build pyroscope ci
+      run: docker build . --file pyroscope.dockerfile --tag ttl.sh/pyroscope:1d --push
     
         
 
